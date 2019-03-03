@@ -22,8 +22,8 @@ public class DockerDemoApplication {
 		String dockerVersion = DefaultDockerClientConfig.API_VERSION;
 //		System.out.println(dockerVersion);
 		
-		DockerClient docker = DockerClientBuilder.getInstance().build();
-		ListContainersCmd containerList = docker.listContainersCmd();
+//		DockerClient docker = DockerClientBuilder.getInstance().build();
+//		ListContainersCmd containerList = docker.listContainersCmd();
 //		System.out.println(containerList);
 		
 //		DockerClient dockerClient = DefaultDockerClientConfig.DOCKER_HOST;
@@ -31,8 +31,9 @@ public class DockerDemoApplication {
 		
 		
 		DockerClientConfig config = DefaultDockerClientConfig.createDefaultConfigBuilder()
-				  .withDockerHost("tcp://localhost:3128")
+				  .withDockerHost("tcp://localhost:2375")
 				  .build();
+
 		DockerClient dockerClient = DockerClientBuilder.getInstance(config)
 				  .build();
 		Info info = dockerClient.infoCmd().exec();
