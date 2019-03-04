@@ -34,17 +34,19 @@ public class ContainerService {
 			command = c.getCommand();
 			System.out.println("COMMAND: " + command); 
 			createdUnix = c.getCreated();
-			System.out.println(createdUnix);
 			Instant instant = Instant.now();
 			long now = instant.getEpochSecond();
-			long secondsAgo = now - createdUnix;
-			System.out.println(secondsAgo);
+			double secondsAgo = now - createdUnix;
 			if (secondsAgo<=60) {
 				created = secondsAgo + " seconds ago";		
+			} else if (secondsAgo<=90) {
+				created = "About a minute ago";
 			} else if(secondsAgo<=3600){
-				created = secondsAgo/60 + " minutes ago";
+				created = Math.round(secondsAgo/60) + " minutes ago";
+			} else if (secondsAgo<=5400) {
+				created = "About an hour ago";
 			} else {
-				created = secondsAgo/3600 + " hours ago";
+				created = Math.round(secondsAgo/3600) + " hours ago";
 			} 
 			System.out.println("CREATED: " + created); //correct the grammar 
 			status = c.getStatus();
@@ -65,8 +67,7 @@ public class ContainerService {
 				System.out.println("NAMES: " + names); //needs to print multiple names
 			}
 			ContainerModel containerModel = new ContainerModel(containerId, image, command, created, status, ports, names);
-			containerModelList.add(containerModel);
-			
+			containerModelList.add(containerModel);			
 		}
 		return containerModelList;
 	}

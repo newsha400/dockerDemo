@@ -1,6 +1,5 @@
 package medStack.dockerDemo;
 
-
 public class ContainerModel {
 	String containerId;
 	String image;
