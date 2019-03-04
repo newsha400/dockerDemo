@@ -1,10 +1,7 @@
 package medStack.dockerDemo;
 
-
 import java.util.List;
-
 import org.springframework.stereotype.Component;
-
 import com.github.dockerjava.api.DockerClient;
 import com.github.dockerjava.api.model.Container;
 import com.github.dockerjava.core.DefaultDockerClientConfig;

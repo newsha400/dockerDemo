@@ -1,5 +1,6 @@
 package medStack.dockerDemo;
 
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -11,9 +12,7 @@ public class ContainerController {
 	ContainerService containerService;
 	
 	@RequestMapping(value="/dockerps", method = RequestMethod.GET)
-	public ContainerModel getContainers() {
+	public List<ContainerModel> getContainers() {
 		return containerService.getContainers();
-	}
-	
-
+	}	
 }
