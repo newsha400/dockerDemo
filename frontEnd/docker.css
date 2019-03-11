@@ -1,0 +1,31 @@
+/*#E5FCC2 1*/
+/*#9DE0AD 2*/
+/*#45ADA8 3*/
+/*#547980 4*/
+/*#594F4F 5*/
+
+body {
+    text-align: center;
+    color: #45ADA8;
+    background-color: #425f65;
+    font-family: sans-serif;
+
+}
+
+ table {
+     color: #594F4F;
+     background-color: #cafffc;
+}
+
+ table , th, td {
+     border: 2px solid #594F4F;
+     border-collapse: collapse;
+
+ }
+
+ th {
+     color: #6c6d6c;
+     background-color: #a6dedb;
+
+ }
+
