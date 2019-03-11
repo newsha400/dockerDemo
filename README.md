@@ -13,3 +13,5 @@ run the jar file
   
 go to the browser and see the result in following address  
 `http://localhost:8080/dockerps`
+  
+To see the results in HTML format, open /frontEnd/docker.html in your browser
