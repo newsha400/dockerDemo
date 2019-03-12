@@ -21,5 +21,5 @@ Or to see it on a server do
 `npm install`  
 `npm start`  
   
-Then open your the page in 
+Then open the page in 
 `http://localhost:3000/`
