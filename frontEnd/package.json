@@ -1,0 +1,13 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "docker demo",
+  "main": "server.js",
+  "dependencies": {
+    "finalhandler": "^1.1.1",
+    "serve-static": "^1.13.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
